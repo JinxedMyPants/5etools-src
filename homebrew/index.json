@@ -1,9 +1,9 @@
 {
 	"readme": [
-		"NOTE: This feature is designed for use in user-hosted copies of the site, and not for integrating \"official\" 5etools content.",
-		"The \"production\" version of the site (i.e., not the development ZIP) has this feature disabled. You can re-enable it by replacing `IS_DEPLOYED = \"X.Y.Z\";` in the file `js/utils.js`, with `IS_DEPLOYED = undefined;`",
-		"This file contains as an index for other homebrew files, which should be placed in the same directory.",
-		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
+		"HINWEIS: Diese Funktion ist für die Verwendung in selbst gehosteten Kopien der Seite gedacht und nicht für die Integration von \"offiziellen\" 5etools-Inhalten.",
+		"Die \"Produktions\"-Version der Seite (d. h. nicht die Entwicklungs-ZIP) hat diese Funktion deaktiviert. Sie können sie wieder aktivieren, indem Sie `IS_DEPLOYED = \"X.Y.Z\";` in der Datei `js/utils.js` durch `IS_DEPLOYED = undefined;` ersetzen.",
+		"Diese Datei dient als Index für andere Homebrew-Dateien, die im selben Verzeichnis abgelegt werden sollten.",
+		"Fügen Sie beispielsweise \"My Homebrew.json\" zum Array \"toImport\" unten hinzu und legen Sie eine gültige JSON-Homebrew-Datei in diesem (\"homebrew/\") Verzeichnis ab."
 	],
 	"toImport": []
 }
