@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="mobile-web-app-capable" content="yes">
 
-	<title>Vehicles - 5etools</title>
+	<title>Fahrzeuge - 5etools</title>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -29,7 +29,9 @@
 	<!-- Chrome Web App Icons -->
 	<link rel="manifest" href="manifest.webmanifest">
 	<meta name="application-name" content="5etools">
-	<meta name="theme-color" content="#006bc4">
+	<!--meta name="theme-color" content="#006bc4"-->
+	<meta name="msapplication-navbutton-color" content="#006bc4">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#006bc4">
 
 	<!-- Windows Start Menu tiles -->
 	<meta name="msapplication-config" content="browserconfig.xml">
@@ -100,8 +102,9 @@
 				<div class="view-col" id="listcontainer">
 					<div class="lst__form-top" id="filter-search-group">
 						<div class="w-100 relative">
-							<input type="search" id="lst__search" autocomplete="off" autocapitalize="off"
-								spellcheck="false" class="search form-control lst__search lst__search--no-border-h">
+							<input type="search" id="lst__search" autocomplete="off" spellcheck="false"
+								class="search form-control lst__search lst__search--no-border-h" title="Search vehicles"
+								placeholder="Search vehicles">
 							<div id="lst__search-glass" class="lst__wrp-search-glass no-events ve-flex-vh-center"><span
 									class="glyphicon glyphicon-search"></span></div>
 							<div class="lst__wrp-search-visible no-events ve-flex-vh-center"></div>
