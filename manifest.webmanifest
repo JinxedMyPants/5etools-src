@@ -1,9 +1,7 @@
 {
-	"manifest_version": 2,
-	"default_locale": "en",
 	"name": "5etools",
 	"short_name": "5etools",
-	"description": "A suite of browser-based tools for 5th Edition  Dungeons & Dragons players and Dungeon Masters.",
+	"description": "Eine Sammlung browserbasierter Werkzeuge für Spieler und Spielleiter der 5. Edition von Dungeons & Dragons.",
 	"icons": [
 		{
 			"src": "android-chrome-192x192.png",
@@ -34,35 +32,32 @@
 	],
 	"shortcuts": [
 		{
-			"name": "Classes",
+			"name": "Klassen",
 			"url": "/classes.html"
 		},
 		{
-			"name": "Spells",
+			"name": "Zauber",
 			"url": "/spells.html"
 		},
 		{
-			"name": "Bestiary",
+			"name": "Bestiarium",
 			"url": "/bestiary.html"
 		},
 		{
-			"name": "Items",
+			"name": "Gegenstände",
 			"url": "/items.html"
 		},
 		{
-			"name": "Feats",
+			"name": "Talente",
 			"url": "/feats.html"
 		},
 		{
-			"name": "Species",
+			"name": "Rassen",
 			"url": "/races.html"
 		}
 	],
 	"start_url": "index.html",
 	"background_color": "#006bc4",
 	"display": "standalone",
-	"theme_color": "#006bc4",
-	"permissions": [
-		"clipboardWrite"
-	]
+	"theme_color": "#006bc4"
 }
