@@ -1,6 +1,6 @@
 import { Workbox } from "workbox-window/Workbox.mjs";
 
-// throwing an uncaught error ends execution of this script.
+// Das Auslösen eines nicht abgefangenen Fehlers beendet die Ausführung dieses Skripts.
 if (!navigator?.serviceWorker) throw new Error("no serviceWorker in navigator, no sw will be injected");
 
 const throttle = (func, delay) => {
@@ -16,7 +16,7 @@ const throttle = (func, delay) => {
 const fetchError = {
 	"generic": throttle(() => {
 		JqueryUtil.doToast({
-			content: `Failed to fetch some generic content\u2014you are offline and have not viewed this content before. Pages may not load correctly.`,
+			content: `Fehler beim Abrufen allgemeiner Inhalte\u2014Sie sind offline und haben diese Inhalte noch nicht angesehen. Seiten werden möglicherweise nicht korrekt geladen.`,
 			type: "warning",
 			autoHideTime: 2_500 /* 2.5 seconds */,
 		});
@@ -24,7 +24,7 @@ const fetchError = {
 
 	"json": throttle(() => {
 		JqueryUtil.doToast({
-			content: `Failed to fetch data\u2014you are offline and have not viewed this content before. This page may not load correctly.`,
+			content: `Fehler beim Abrufen von Daten\u2014Sie sind offline und haben diese Daten noch nicht angesehen. Diese Seite wird möglicherweise nicht korrekt geladen.`,
 			type: "danger",
 			autoHideTime: 9_000 /* 9 seconds */,
 		});
@@ -32,7 +32,7 @@ const fetchError = {
 
 	"image": throttle(() => {
 		JqueryUtil.doToast({
-			content: `Failed to fetch images\u2014you are offline and have not viewed this content before. Images may not display correctly.`,
+			content: `Fehler beim Abrufen von Bildern\u2014Sie sind offline und haben diese Bilder noch nicht angesehen. Bilder werden möglicherweise nicht korrekt angezeigt.`,
 			type: "info",
 			autoHideTime: 5_000 /* 5 seconds */,
 		});
@@ -42,62 +42,62 @@ const fetchError = {
 const wb = new Workbox("sw.js");
 
 wb.addEventListener("controlling", () => {
-	const lnk = ee`<a href="${Renderer.get().baseUrl}changelog.html" class="alert-link">changelog</a>`
+	const lnk = ee`<a href="${Renderer.get().baseUrl}changelog.html" class="alert-link">Änderungsprotokoll</a>`
 		.onn("click", evt => {
 			evt.stopPropagation();
 		});
 	JqueryUtil.doToast({
-		content: ee`<div>${window.location.hostname} has been updated\u2014reload to see new content, and ensure the page is displayed correctly. See the ${lnk} for more info!</div>`,
+		content: ee`<div>${window.location.hostname} wurde aktualisiert\u2014bitte neu laden, um neue Inhalte zu sehen und sicherzustellen, dass die Seite korrekt angezeigt wird. Siehe das ${lnk} für weitere Informationen!</div>`,
 		type: "success",
-		isAutoHide: false, // never auto hide - this warning is important
+		isAutoHide: false, // niemals automatisch ausblenden - diese Warnung ist wichtig
 	});
 });
 
-// this is where we tell the service worker to start - after the page has loaded
-// event listeners need to be added first
+// hier sagen wir dem Service Worker, dass er starten soll - nachdem die Seite geladen wurde
+// Event-Listener müssen vorher hinzugefügt werden
 wb.register();
 
-// below here is dragons, display ui for caching state
+// ab hier folgen die UI-Elemente zur Anzeige des Cache-Status
 
 /**
- * ask the service worker to runtime cache files that match a regex
- * @param {RegExp} routeRegex the regex to use to determine if a file should be cached
+ * Fordere den Service Worker auf, Dateien zur Laufzeit zwischenzuspeichern, die einem Regex entsprechen
+ * @param {RegExp} routeRegex das Regex, um zu bestimmen, ob eine Datei gecacht werden soll
  */
 const swCacheRoutes = (routeRegex) => {
 	wb.messageSW({
 		type: "CACHE_ROUTES",
 		payload: { routeRegex },
 	});
-	JqueryUtil.doToast({content: "Starting preload...", autoHideTime: 500});
+	JqueryUtil.doToast({ content: "Vorabruf wird gestartet...", autoHideTime: 500 });
 };
 
 /**
- * ask the service worker to cancel route caching
+ * Fordere den Service Worker auf, das Routen-Caching abzubrechen
  */
 const swCancelCacheRoutes = () => {
-	wb.messageSW({type: "CANCEL_CACHE_ROUTES"});
+	wb.messageSW({ type: "CANCEL_CACHE_ROUTES" });
 	setTimeout(() => {
 		removeDownloadBar();
-		JqueryUtil.doToast("Preload was canceled. Some data may have been preloaded.");
+		JqueryUtil.doToast("Vorabruf wurde abgebrochen. Einige Daten könnten bereits vorgeladen sein.");
 	}, 1000);
 };
 
 /**
- * Ask the service worker to remove itself.
+ * Fordere den Service Worker auf, sich selbst zu entfernen.
  */
 const swResetAll = () => {
-	wb.messageSW({type: "RESET"});
-	JqueryUtil.doToast({content: "Resetting..."});
+	wb.messageSW({ type: "RESET" });
+	JqueryUtil.doToast({ content: "Zurücksetzen..." });
 };
 
-// icky global but no bundler, so no other good choice
+// unschönes globales Objekt, aber ohne Bundler keine bessere Wahl
 globalThis.swCacheRoutes = swCacheRoutes;
 globalThis.swResetAll = swResetAll;
 
 let downloadBar = null;
 
 /**
- * Remove the download bar from the dom, and null downloadBar.
+ * Entfernt die Download-Leiste aus dem DOM und setzt downloadBar auf null.
  */
 const removeDownloadBar = () => {
 	if (downloadBar === null) return;
@@ -106,8 +106,8 @@ const removeDownloadBar = () => {
 };
 
 /**
- * Add the download bar to the dom, and write the jQuery object to downloadBar.
- * Bind event handlers.
+ * Fügt die Download-Leiste dem DOM hinzu und schreibt das jQuery-Objekt nach downloadBar.
+ * Bindet Event-Handler.
  */
 const initDownloadBar = () => {
 	if (downloadBar !== null) removeDownloadBar();
@@ -126,12 +126,12 @@ const initDownloadBar = () => {
 			${$btnCancel}
 		</div>`.appendTo(document.body);
 
-	downloadBar = {$wrapOuter, $wrapBar, $displayProgress, $displayPercent};
+	downloadBar = { $wrapOuter, $wrapBar, $displayProgress, $displayPercent };
 };
 
 /**
- * Update the ui of the download bar based on a new message from the service worker. If there is no download bar, make one.
- * @param {{type: string, payload: Object}} msg the message from the sw
+ * Aktualisiert die UI der Download-Leiste basierend auf einer neuen Nachricht vom Service Worker. Falls keine Leiste existiert, erstelle eine.
+ * @param {{type: string, payload: Object}} msg die Nachricht vom SW
  */
 const updateDownloadBar = (msg) => {
 	if (downloadBar === null) initDownloadBar();
@@ -142,7 +142,7 @@ const updateDownloadBar = (msg) => {
 			const percent = `${(100 * (msg.payload.fetched / msg.payload.fetchTotal)).toFixed(3)}%`;
 			downloadBar.$displayProgress.css("width", percent);
 			downloadBar.$displayPercent.text(percent);
-			// do a toast and cleanup if every single file has been downloaded.
+			// zeige eine Toast-Meldung und bereinige, wenn alle Dateien heruntergeladen wurden.
 			if (msg.payload.fetched === msg.payload.fetchTotal) finishedDownload();
 			break;
 
@@ -154,7 +154,7 @@ const updateDownloadBar = (msg) => {
 
 			downloadBar.$wrapBar.addClass("page__wrp-download-bar--error");
 			downloadBar.$displayProgress.addClass("page__disp-download-progress-bar--error");
-			downloadBar.$displayPercent.text("Error!");
+			downloadBar.$displayPercent.text("Fehler!");
 
 			setTimeout(() => {
 				removeDownloadBar();
@@ -163,9 +163,9 @@ const updateDownloadBar = (msg) => {
 						type: "warning",
 						autoHideTime: 15_000,
 						content:
-					`An error occurred while preloading.
-					You may have gone offline, or the server may not be responding.
-					Please try again. ${VeCt.STR_SEE_CONSOLE}`,
+							`Beim Vorabladen ist ein Fehler aufgetreten.
+					Möglicherweise sind Sie offline oder der Server antwortet nicht.
+					Bitte versuchen Sie es erneut. ${VeCt.STR_SEE_CONSOLE}`,
 					},
 				);
 			}, 2_000);
@@ -174,11 +174,11 @@ const updateDownloadBar = (msg) => {
 };
 
 /**
- * Call when the progress is 100%, to remove the bar and do a toast
+ * Aufrufen, wenn der Fortschritt 100% erreicht hat, um die Leiste zu entfernen und einen Toast zu zeigen
  */
 const finishedDownload = () => {
 	removeDownloadBar();
-	JqueryUtil.doToast({type: "success", content: "Preload complete! The preloaded content is now ready for offline use."});
+	JqueryUtil.doToast({ type: "success", content: "Vorabruf abgeschlossen! Die vorgeladenen Inhalte sind jetzt offline verfügbar." });
 };
 
 wb.addEventListener("message", event => {

@@ -1,4 +1,6 @@
 {
-	"moduleFileExtensions": ["js"],
+	"moduleFileExtensions": [
+		"js"
+	],
 	"transform": {}
 }

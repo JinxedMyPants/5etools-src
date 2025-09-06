@@ -1,24 +1,22 @@
-# Automation
+# Automatisierung
 
-The following is a list of non-automated or semi-automated (i.e. handled with manually-run-once scripts) procedures or data additions that must be maintained. Some the items on this list may be automation-friendly and simply as-yet un-automated, others are impractical or near-impossible to meaningfully automate. This list exist to serve as a reminder/checklist to any maintainer, but also as a gauge of how much manual upkeep is currently required to better judge whether adding to this list with new features is a good idea or not.
+Die folgende Liste enthält nicht automatisierte oder halbautomatisierte (d. h. mit manuell einmal ausgeführten Skripten bearbeitete) Vorgänge oder Datenanpassungen, die gepflegt werden müssen. Einige Einträge auf dieser Liste sind automationsfreundlich und bisher einfach noch nicht automatisiert, andere sind unpraktisch oder nahezu unmöglich sinnvoll zu automatisieren. Diese Liste dient als Erinnerung/Checkliste für Maintainer und auch als Indikator dafür, wie viel manuelle Pflege derzeit erforderlich ist, um besser einschätzen zu können, ob es sinnvoll ist, neue Funktionen zur Liste hinzuzufügen oder nicht.
 
-Note that this list is being created retroactively, and is as-yet incomplete.
+Beachte, dass diese Liste nachträglich erstellt wird und noch unvollständig ist.
 
-#### All Data
+#### Alle Daten
 
-- Page numbers (`page`)
-- Data "tagging" (render `@tag` syntax)
-	- This is partially automated, see `node/tag-json.js` (although many false positives are generated, e.g. "Sneak Attack" being tagged as the Attack action)
-	- Some tags are too specific to automate, such as many of those using `@filter`
-- Instances where `_copy` could be utilised, e.g. by converting adventure NPCs which are "commoner with X attributes"  to a `_copy` of "commoner" with the appropriate modifications
+- Seitenzahlen (`page`)
+- Daten-„Tagging“ (Darstellung der `@tag`-Syntax)
+	- Dies ist teilweise automatisiert, siehe `node/tag-json.js` (es werden jedoch viele Fehlalarme erzeugt, z. B. wird "Sneak Attack" fälschlicherweise als Angriffsaktion getaggt)
+	- Einige Tags sind zu spezifisch, um sie zu automatisieren, z. B. viele, die `@filter` verwenden
+- Fälle, in denen `_copy` genutzt werden könnte, z. B. indem Abenteuer-NPCs, die "commoner mit X Attributen" sind, in eine `_copy` von "commoner" mit den entsprechenden Anpassungen umgewandelt werden
 
-#### Spells
+#### Zauber
 
 - JSON `spell[].miscTags`
 
-#### Items
+#### Gegenstände
 
 - JSON `item[].ability`
-- Any and all item data contained in natural language (e.g. specific weapons in adventures)
-
-
+- Alle Gegenstands-Daten, die in natürlicher Sprache vorliegen (z. B. spezifische Waffen in Abenteuern)

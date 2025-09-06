@@ -1,181 +1,179 @@
-# Contributing
+# Beitragende
 
 ## Homebrew
 
-Homebrew contributions (conversions, original content) should be made against the [homebrew repository](https://github.com/TheGiddyLimit/homebrew/). See the guidance there for more information.
+Beiträge zu Homebrew (Konversionen, eigene Inhalte) sollten an das [Homebrew-Repository](https://github.com/TheGiddyLimit/homebrew/) gerichtet werden. Siehe dort die Hinweise für weitere Informationen.
 
-## Typo Fixes/Etc.
+## Rechtschreibfehler / kleine Änderungen
 
-Small fixes and tweaks, especially typos, should be reported via the "typos etc." channel in our [Discord](https://discord.gg/5etools). If you do not use Discord, opening an issue on GitHub is acceptable.
+Kleine Korrekturen und Anpassungen — insbesondere Tippfehler — bitte im Kanal „typos etc.“ auf unserem [Discord](https://discord.gg/5etools) melden. Wenn du Discord nicht nutzt, ist das Eröffnen eines Issues auf GitHub ebenfalls akzeptabel.
 
-## Feature Requests and New Features
+## Funktionswünsche und neue Features
 
-All feature requests should be done via the `/featurerequest` bot command in our [Discord](https://discord.gg/5etools).
+Funktionswünsche bitte über den Bot-Befehl `/featurerequest` auf unserem [Discord](https://discord.gg/5etools) einreichen.
 
-Should you wish to directly contribute code towards a new feature, preferably get in touch via [Discord](https://discord.gg/5etools) first. If the feature is deemed acceptable, and significant/distinct enough that it makes sense for a third party to undertake the work, then a pull request can be opened on GitHub.
+Wenn du direkt Code für ein neues Feature beitragen möchtest, nimm idealerweise zuerst über [Discord](https://discord.gg/5etools) Kontakt auf. Wird das Feature als sinnvoll und ausreichend signifikant eingeschätzt, damit ein Dritter daran arbeiten kann, kann ein Pull Request auf GitHub geöffnet werden.
 
-In general, the following should be noted:
+Allgemeine Richtlinien:
 
-- Features which place an additional long-term maintenance burden on the project will not be accepted.
-- Features which significantly deviate from the D&D 5e canon (for example, complex custom random generators; support for system forks or significant homebrew) will not be accepted.
+- Features, die eine zusätzliche langfristige Wartungsbelastung für das Projekt verursachen, werden in der Regel nicht akzeptiert.
+- Features, die stark vom D&D‑5e‑Kanon abweichen (z. B. komplexe eigene Zufallsgeneratoren, Unterstützung für System‑Abspaltungen oder umfangreiche Homebrew), werden nicht akzeptiert.
 
-## Bug Reports
+## Fehlerberichte
 
-Bugs should be reported via the `/bugreport` bot command in our [Discord](https://discord.gg/5etools).
+Bugs bitte über den Bot-Befehl `/bugreport` auf unserem [Discord](https://discord.gg/5etools) melden.
 
 ---
 
-## Developer Notes
+## Entwicklerhinweise
 
-### Data Sources and Versioning
+### Datenquellen und Versionierung
 
-Only "official" (that is, published by WotC) data is to be included in the site. Anything else should be added to the homebrew repository. Some exceptions to this rule are:
-- All Adventurers League (AL) -specific content is to be kept in the homebrew repository. While much of this content broadly falls under the "published by WotC" umbrella, a good deal of it doesn't. For the sake of consistency/cleanliness, all AL content is to be considered homebrew.
-- Anything published in the Dragon+ magazine.
-- Anything veto'd by the maintainers of this repository.
+Auf der Seite dürfen nur „offizielle“ (d. h. von WotC veröffentlichte) Daten aufgenommen werden. Anderes gehört ins Homebrew‑Repository. Ausnahmen sind beispielsweise:
 
-Prioritise RAW above all else. Aim to provide a 1:1 copy of the original data. Obvious typos (for instance, mathematical errors in creature stat blocks) may be corrected at the discretion of the maintainer(s).
+- Spezifische Adventurers League‑Inhalte (AL) werden im Homebrew‑Repository verwaltet. Obwohl vieles davon ursprünglich von WotC veröffentlicht ist, wird zur Konsistenz alles AL‑bezogene als Homebrew behandelt.
+- Inhalte aus der Dragon+‑Zeitschrift.
+- Inhalte, die von den Maintainer*innen dieses Repositories ausdrücklich ausgeschlossen wurden.
 
-Aim to use the latest version of any published material. Older versions which are sufficiently different (and relevant to community interests) can be moved to the homebrew repository.
+Priorität hat RAW (Rules As Written). Ziel ist eine 1:1‑Kopie der Originaldaten. Offensichtliche Tippfehler (z. B. mathematische Fehler in Statblöcken) können nach Ermessen der Maintainer korrigiert werden.
 
-The primary source for an entity should be that under which it was first released. Exceptions to this rule include:
-- The entity was originally released in a "partial" or "pre-release" form. For example, races from WGE were later re-released in ERLW.
-- The entity was originally released in a published adventure, but was later re-printed in a generic supplement. For example, the demon lords in OotA were re-printed in MTF, or the Haunted One background in CoS was re-printed in VRGR.
+Verwende möglichst die neueste Version eines veröffentlichten Materials. Deutlich abweichende ältere Versionen, die für die Community relevant sind, können ins Homebrew‑Repository ausgelagert werden.
 
-#### Page-Specific Notes
+Die primäre Quelle für ein Element sollte die Produktveröffentlichung sein, in der es zuerst erschien. Ausnahmen:
 
-*Languages page.* As there is no well-defined RAW format for language data, the languages page collects together information from several disjoint places. A priority list of sources to be considered is:
-- The "Languages" section on PHB p123
-- official sources, in order of:
-    - PHB > (DMG) > MM
-    - Other "official" (i.e. published) products in release-date order
-    - "Unofficial" products (i.e. Unearthed Arcana; Plane Shift) in release-date order
+- Das Element wurde zuerst in einer teilweisen oder Pre‑Release‑Form veröffentlicht und später in überarbeiteter Form neu veröffentlicht (z. B. Rassen aus WGE später in ERLW).
+- Das Element erschien zuerst in einem Abenteuer und wurde später in einem allgemeinen Supplement nachgedruckt (z. B. Dämonenherrscher von OotA in MTF).
 
-Within this ordering, the following prioritisation should be made:
-- text that directly refers to or describes a language, in order of first appearance in the product (i.e. if a language is mentioned on page 2 and 10 of a book, the entry on page 2 should be taken as the primary source)
-- text that is given for player use (e.g. the "Druidic" feature of the Druid class) (the text of which may have to be adapted to fit a reference format; i.e. changing "You can understand..." to "A speaker or X language can understand...).
+#### Seitenspezifische Hinweise
 
-### Target JavaScript Version
+Sprachen‑Seite: Da es kein einheitliches RAW‑Format für Sprachdaten gibt, werden Informationen aus mehreren Quellen zusammengetragen. Prioritäten (höchste zuerst):
 
-Any language feature which is available in both main-line Chrome and main-line Firefox, and has been available for at least six months, may be used.
+- Abschnitt „Languages“ im PHB (S. 123)
+- Offizielle Quellen in folgender Reihenfolge:
+	- PHB > (DMG) > MM
+	- Weitere offizielle Produkte in chronologischer Veröffentlichungsfolge
+	- Inoffizielle Produkte (z. B. Unearthed Arcana, Plane Shift) in chronologischer Reihenfolge
 
-### Style Guidelines
+Innerhalb dieser Reihenfolge gilt zusätzlich:
+
+- Text, der explizit eine Sprache beschreibt oder auf sie verweist, nach der Reihenfolge des ersten Auftretens im Produkt (Seite 2 vor Seite 10).
+- Text, der für den Spielergebrauch bestimmt ist (z. B. die Druidic‑Funktion der Druidenklasse). Er darf zur Anpassung an ein Referenzformat angepasst werden (z. B. „You can understand...“ → „A speaker of X language can understand...“).
+
+### Ziel‑JavaScript‑Version
+
+Es dürfen Sprachfeatures verwendet werden, die in den Standardversionen von Chrome und Firefox verfügbar sind und seit mindestens sechs Monaten standardmäßig unterstützt werden.
+
+### Stilrichtlinien
 
 #### Code
 
-- Use tabs over spaces.
+- Bevorzuge Tabs gegenüber Leerzeichen.
 
 #### CSS
 
-- The [BEM](http://getbem.com/) ("Block Element Modifier") naming strategy should be used where possible.
+- Nutze möglichst die BEM‑Namenskonvention (Block Element Modifier) — siehe http://getbem.com/
 
-#### Data/Text
+#### Daten / Text
 
-- Format JSON to match the default output of JavaScript's `JSON.stringify` (using tabs for indentation), i.e. one line per bracket and one line per value. JSON files programmatically generated from other JSON files (i.e. those stored in `data/generated`) should be minified, however.
+- Formatiere JSON so, dass es dem Standardausgang von JavaScripts `JSON.stringify` entspricht (Tabs zur Einrückung): je Klammer und Wert eine eigene Zeile. Programmatisch erzeugte JSON‑Dateien (z. B. in `data/generated`) sollten dagegen minifiziert werden.
 
-- When "tagging" references in data (e.g. `{@creature goblin}`), the following rules apply:
-    - Only tag references which are _intended as references_. For example, the Wizard class in `You gain one cantrip of your choice from the wizard spell list` should be tagged, whereas the Wizard class in `Together, a group of seven powerful wizards sought to contain the demon` should not be tagged. One is a reference to the mechanical class, one is merely the casual usage of the word "wizard."
-    - In a similar vein, never tag anything within a `quote`-type block. Even if the quote directly refers to a specific creature, we can assume the quote is from a universe/perspective in which (for example) stat blocks don't exist, and therefore the tag should be omitted to maintain the flavor of the quote.
-    - Within data from a source, avoid referencing content from a source printed after the publication of that source. For example, MTF content might reference SCAG deities, but SCAG deities should refrain from referencing MTF content.
+- Regeln zum „Taggen“ von Referenzen in Textdaten (z. B. `{@creature goblin}`):
+	- Tagge nur beabsichtigte Referenzen. Beispiel: In „You gain one cantrip of your choice from the wizard spell list“ ist „wizard“ eine mechanische Referenz und darf getaggt werden; im Satz „Together, a group of seven powerful wizards sought to contain the demon“ ist es kein Tag.
+	- Tagge niemals Text innerhalb eines `quote`‑Blocks. Ein Zitat soll stilistisch unangetastet bleiben.
+	- In Quelldaten vermeide Referenzen auf Inhalte, die nach Veröffentlichung der Quelle erschienen sind.
 
-### Inclusion of `_copy` Entities
+### Einbeziehung von `_copy`‑Entitäten
 
-Only entities which are meaningfully different in crunch, or have unique art, should be included as `_copy`s.
+Nur Entitäten mit signifikanten mechanischen Unterschieden oder eigenem Artwork sollten als `_copy` aufgenommen werden.
 
-For example, for creatures (`"monster"`):
+Beispiele für Monster: Nicht ausreichend alleinstehend (kein alleiniger Grund für `_copy`):
 
-Insufficient in isolation (though should be applied if the `_copy` is to be created):
+- Größe
+- Kreaturentyp
+- Gesinnung
+- Trefferpunkte
 
-- Size
-- Creature type
-- Alignment
-- Hit points
+Ausreichend alleinstehend:
 
-Sufficient in isolation:
+- Hinzufügen/Entfernen von Traits oder Aktionen
+- Hinzufügen/Entfernen von Zaubern
+- Änderungen an Schadensarten
+- Immunitäten, Resistenzen
+- Einzigartiges offizielles Artwork/Token
+- usw.
 
-- Gaining/losing traits; actions
-- Gaining/losing spellcasting
-- Changes to damage types
-- Immunities, resistances, etc.
-- Unique, official, art/token
-- etc.
+### JSON‑Bereinigung
 
-### JSON Cleaning
+#### Abschließende Kommata
 
-#### Trailing commas
-
-To remove trailing commas in JSON:
+Um abschließende Kommata in JSON zu entfernen:
 
 Find: `(.*?)(,)(:?\s*]|\s*})`
-
 Replace: `$1$3`
 
-#### Character replacement
+#### Zeichenersetzung
 
-- `’` should be replaced with `'`
-- `“` and `”` should be replaced with `"`
-- `—` (em dash) should be replaced with `\u2014` (Unicode for em dash)
-- `–` should be replaced with `\u2013` (Unicode for en dash)
-- `−` should be replaced with `\u2212` (Unicode for minus sign)
-- `•` should be not be used unless the JSON in question is not yet covered by the entryRenderer, i.e. should be encoded as a list
-- the only Unicode escape sequences allowed are `\u2014`, `\u2013`, and `\u2212`; all other characters (unless noted above) should be stored as-is
+- `’` → `'`
+- `“` und `”` → `"`
+- `—` (Em‑Dash) → `\u2014`
+- `–` → `\u2013`
+- `−` → `\u2212`
+- `•` sollte vermieden werden, es sei denn, das JSON wird vom entryRenderer noch nicht unterstützt; dann als Liste kodieren
+- Zulässige Unicode‑Escape‑Sequenzen: `\u2014`, `\u2013`, `\u2212`; alle anderen Zeichen (sofern nicht anders angegeben) unverändert lassen
 
-#### Convention for dashes
+#### Gedankenstrich‑Konvention
 
-- `-` (hyphen) should **only** be used to hyphenate words, e.g. `60-foot` and `18th-level`
-- `\u2014` should be used for parenthetical dash pairs, or for marking empty table rows.
-- `\u2013` should be used for joining numerical ranges, e.g. `1-5` should become `1\u20135`.
-- `\u2212` should be used for unary minus signs, in the case of penalties. For example, `"You have a -5 penalty to..."` should become `"You have a \u22125 penalty to..."`.
-- any whitespace on any side of a `\u2014` should be removed
+- `-` (Bindestrich) nur zur Wortverbindung verwenden, z. B. `60-foot`, `18th-level`
+- `\u2014` für parenthetische Gedankenstriche oder leere Tabellenzeilen; kein Leerzeichen vor oder nach `\u2014`
+- `\u2013` für numerische Bereiche (z. B. `1\u20135`)
+- `\u2212` für unäre Minuszeichen (z. B. `"You have a \u22125 penalty to..."`)
 
-#### Convention for measurement
+#### Maßeinheiten
 
-- Adjectives: a hyphen and the full name of the unit of measure should be used, e.g. dragon exhales acid in a `60-foot line`
-- Nouns: a space and the short name of the unit of measure (including the trailing period) should be used, e.g. `blindsight 60 ft.`, `darkvision 120 ft.`
-- Time: a slash, `/`, with no spaces on either side followed by the capitalised unit of time, e.g. `2/Turn`, `3/Day`
+- Als Adjektiv: Bindestrich und ausgeschriebene Einheit (z. B. „60‑foot line“)
+- Als Nomen: Leerzeichen und abgekürzte Einheit mit Punkt (z. B. `blindsight 60 ft.`, `darkvision 120 ft.`)
+- Zeitangaben: Schrägstrich ohne Leerzeichen, Großschreibung der Einheit (z. B. `2/Turn`, `3/Day`)
 
-#### Convention for Dice
+#### Würfelnotation
 
-Dice should be written as `[X]dY[ <+|-|×> Z]`, i.e. with a space between dice and operator, and a space between operator and modifier. Some examples of acceptable formatting are: `d6`, `2d6`, or `2d6 + 1`.
+Würfel schreiben als `[X]dY[ <+|-|×> Z]` mit Leerzeichen vor und nach Operatoren. Beispiele: `d6`, `2d6`, `2d6 + 1`.
 
-#### Convention for Item Names
+#### Gegenstandsnamen
 
-Item names should be title-case, with the exception of units in parentheses, which should be sentence-case. Items who's volume or amount is specified by container (e.g. `(vial)`) treat the container as a unit.
+Gegenstände im Title Case, Ausnahmen: Einheiten in Klammern im Satzfall (z. B. `(vial)`).
 
-### Mouse/Keyboard Events
+### Maus‑/Tastaturereignisse
 
-Avoid binding ALT-modified events, as these are not available under MacOS or various Linux flavors. Binding SHIFT-/CTRL-modified events is preferred.
+Vermeide ALT‑modifizierte Events (inkonsistent auf macOS und manchen Linux‑Distributionen). Bevorzuge SHIFT‑/CTRL‑modifizierte Events.
 
-### Dev Server
+### Dev‑Server
 
-Do `npm run serve:dev` to launch a local dev server that serves the project files on [`http://localhost:5050/index.html`](http://localhost:5050/index.html).
+Starte einen lokalen Dev‑Server mit:
+`npm run serve:dev`
+Dieser stellt die Projektdateien unter http://localhost:5050/index.html bereit.
 
-### Version bump
+### Versionserhöhung
 
-Do `npm run version-bump -- [OPTION]`, where `[OPTION]` is one of the following:
+Führe aus:
+`npm run version-bump -- [OPTION]`
+wobei `[OPTION]` eine der folgenden ist:
 
-- `major` to increment the major version (`1.2.3` will become `2.0.0`)
-- `minor` to increment the minor version (`1.2.3` will become `1.3.0`)
-- `patch` to increment the patch version (`1.2.3` will become `1.2.4`)
-- a version number (like `1.2.3`)
+- `major` (z. B. `1.2.3` → `2.0.0`)
+- `minor` (z. B. `1.2.3` → `1.3.0`)
+- `patch` (z. B. `1.2.3` → `1.2.4`)
+- oder eine konkrete Versionsnummer (z. B. `1.2.3`)
 
-It will first run the tests and fail to increase the version if the tests fail.
-It will then automatically replace the version in the files where it needs to be replaced, create a commit with the message `chore(version): bump` and create a tag (in the form `v1.2.3`) at the commit.
-This feature can be easily disabled by doing `npm config set git-tag-version false`.
+Ablauf: Es werden zuerst die Tests ausgeführt; schlagen diese fehl, bricht der Vorgang ab. Anschließend werden betroffene Dateien versioniert, ein Commit mit der Nachricht `chore(version): bump` erstellt und ein Tag im Format `v1.2.3` gesetzt. Das Tagging lässt sich mit `npm config set git-tag-version false` deaktivieren.
 
 ### Service Worker
 
-The service worker--which adds a client-side network caching layer, improving performance and allowing offline use--is not committed to the repository, and so must (optionally) be built locally. This can be done using either:
+Der Service Worker (clientseitiges Netzwerk‑Caching zur Performance‑Verbesserung und Offline‑Nutzung) wird nicht ins Repository committet und muss optional lokal gebaut werden:
 
-- `npm run build:sw`, to build a development version which outputs useful log messages
-- `npm run build:sw:prod`, to build a production version
+- `npm run build:sw` — Entwicklungs‑Variante (mit Logausgaben)
+- `npm run build:sw:prod` — Produktions‑Variante
 
-Both versions handle caching for the same files, which is an index of your local files on disk.
+Beide Varianten cachen dieselben Dateien lokal. Das Erstellen des Service Workers ist optional. Beachte: Beim Einsatz des Service Workers werden einige Dateien cache‑first bereitgestellt. Beim lokalen Entwickeln solltest du den Service Worker deaktivieren/umgehen, damit lokale Änderungen sichtbar bleiben.
 
-Note that building the service worker is optional.
+### Bilder
 
-Note that while using the service worker, some files are served cache-first (see the comments in the service worker files for more information). Care should be taken to either disable or work around the service worker when developing locally, as local changes may not otherwise be visible when refreshing a page.
-
-### Images
-
-Images are generally stored as `.webp` at 85% quality. Token images, and a handful of other small images (for example, UI elements), are stored as lossless `.webp`.
+Bilder werden im Regelfall als `.webp` mit 85 % Qualität gespeichert. Token‑Bilder und einige kleine Assets (z. B. UI‑Elemente) werden verlustfrei als `.webp` gespeichert.

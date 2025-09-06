@@ -8,17 +8,13 @@
 		"custom-property-empty-line-before": null,
 		"declaration-empty-line-before": null,
 		"rule-empty-line-before": null,
-
 		"scss/dollar-variable-empty-line-before": null,
 		"scss/double-slash-comment-empty-line-before": null,
-
 		"no-duplicate-selectors": null,
 		"no-descending-specificity": null,
-
 		"custom-property-pattern": "^([a-z][a-z0-9]*)(-+[a-z0-9]+)*$",
 		"keyframes-name-pattern": null,
 		"selector-id-pattern": null,
-
 		"color-named": "never",
 		"number-max-precision": 8,
 		"selector-no-qualifying-type": null,
@@ -31,7 +27,9 @@
 		"function-url-quotes": [
 			"always",
 			{
-				"except": ["empty"]
+				"except": [
+					"empty"
+				]
 			}
 		],
 		"scss/at-mixin-parentheses-space-before": "always"

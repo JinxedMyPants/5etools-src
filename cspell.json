@@ -1,34 +1,34 @@
 {
 	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
 	"version": "0.2",
-	"language": "en,en-GB",
+	"language": "de,de-DE",
 	"dictionaryDefinitions": [
 		{
-			"name": "dnd-words",
+			"name": "dnd-woerter",
 			"path": "./spellcheck/dnd-words.txt",
 			"addWords": true
 		},
 		{
-			"name": "javascript-words",
+			"name": "javascript-woerter",
 			"path": "./spellcheck/javascript-words.txt",
 			"addWords": true
 		},
 		{
-			"name": "artist-names",
+			"name": "kuenstler-namen",
 			"path": "./spellcheck/artist-names.txt",
 			"addWords": true
 		},
 		{
-			"name": "credits-names",
+			"name": "credits-namen",
 			"path": "./spellcheck/credits-names.txt",
 			"addWords": true
 		}
 	],
 	"dictionaries": [
-		"dnd-words",
-		"javascript-words",
-		"artist-names",
-		"credits-names"
+		"dnd-woerter",
+		"javascript-woerter",
+		"kuenstler-namen",
+		"credits-namen"
 	],
 	"ignorePaths": [
 		"./spellcheck/*.txt",

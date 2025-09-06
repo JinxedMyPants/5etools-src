@@ -1,30 +1,30 @@
-## Favicon update - 1.114.2 (probably)
-Website favicons have been subtly redone by jpcranford (aka ldsmadman), based on the original logo by Fantom and Cyanomouss.
+## Favicon-Update - 1.114.2 (wahrscheinlich)
+Die Website-Favicons wurden dezent neu gestaltet von jpcranford (aka ldsmadman), basierend auf dem Originallogo von Fantom und Cyanomouss.
 
-Here's a quick breakdown of what the new icons look like:
+Hier eine kurze Übersicht, wie die neuen Icons aussehen:
 
 ![](./favicon-128x128.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](./favicon_preview.png)
 
-*New favicon and preview*
+*Neues Favicon und Vorschau*
 
 ![](./android-chrome-192x192.png)
 
-*App icon*
+*App-Symbol*
 
 ![](./safari_pin_preview.png)
 
-*Safari Pinned Tab*
+*Angepinntes Tab in Safari*
 
 ![](./touch_bar_preview.png)
 
-*MacBook Touch Bar Bookmark*
+*MacBook Touch Bar Lesezeichen*
 
-_**Not pictured, but updated:** Android splash screen, Windows Start Menu tiles, standalone app mode_
+_**Nicht abgebildet, aber aktualisiert:** Android-Splashscreen, Windows‑Startmenü‑Kacheln, eigenständiger App‑Modus_
 
-SVG designs were completed within Illustrator, and final sizes generated with Sketch. All source files have been included in a ZIP file [here](./favicon_source_files.zip), with the changes detailed below for the curious.
+Die SVG‑Designs wurden in Illustrator fertiggestellt und die Endgrößen mit Sketch erzeugt. Alle Quelldateien sind in einer ZIP‑Datei [hier](./favicon_source_files.zip) enthalten; die Änderungen sind unten für Interessierte aufgeführt.
 
-### New HTML code
-This is the code that should now be in every page's `<head>` section.
+### Neuer HTML-Code
+Dies ist der Code, der nun in jedem `<head>`-Bereich einer Seite stehen sollte.
 
 ```html
 <!-- Favicons -->
@@ -58,9 +58,9 @@ This is the code that should now be in every page's `<head>` section.
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#006bc4">
 ```
 
-### More changes
-- **Favicon:** The stroke color has been changed to match the app icon. This has the added benefit of making it easier to see while in dark mode.
-- **App icon:** The text has been resized within the app icon to give more spacing around edge. (Apple's "official" app icon design grid came in handy here.) Also, a *slight* gradient was applied to give it some almost-imperceptible pop.
-- **Goodbye, pirate hat:** The icon with the pirate hat has been replaced. It was cheeky, but definitely not the impression we want to give off. <!-- TODO: Delete the /icon folder, wherever it is, since it's not used anymore -->
-- **Android splash screen:** When launching it from the home screen on Android, 5etools now gets a fancy splash screen.
-- **Better standalone mode:** After adding 5etools to your device's home screen (or installing it in your browser as an app), it now behaves like its own app, including showing up in your app switcher as "5etools." It did this before, but now it should behave a little nicer. Depending on your platform, it might even show a back button now.
+### Weitere Änderungen
+- **Favicon:** Die Strichfarbe wurde angepasst, damit sie zum App‑Symbol passt. Das hat den zusätzlichen Vorteil, dass es im Dunkelmodus besser sichtbar ist.
+- **App‑Symbol:** Der Text im App‑Symbol wurde verkleinert, um mehr Abstand zum Rand zu schaffen. (Apples „offizielles“ App‑Icon‑Designraster war dabei hilfreich.) Zusätzlich wurde ein *leichter* Verlauf angewendet, um dem Symbol kaum wahrnehmbaren Akzent zu verleihen.
+- **Auf Wiedersehen, Piratenhut:** Das Icon mit dem Piratenhut wurde ersetzt. Es war frech, aber nicht der Eindruck, den wir vermitteln wollen. <!-- TODO: Delete the /icon folder, wherever it is, since it's not used anymore -->
+- **Android‑Splashscreen:** Beim Starten von der Startseite unter Android zeigt 5etools jetzt einen schicken Splashscreen.
+- **Besserer Standalone‑Modus:** Nachdem 5etools zum Home‑Bildschirm Ihres Geräts hinzugefügt wurde (oder im Browser als App installiert wurde), verhält es sich nun wie eine eigene App und erscheint z. B. im App‑Switcher als „5etools“. Das tat es zuvor schon, aber jetzt sollte es sich etwas sauberer verhalten. Je nach Plattform wird eventuell sogar eine Zurück‑Schaltfläche angezeigt.

@@ -1,17 +1,18 @@
 # 5e.tools
 
-Visit the [main site](https://5e.tools/index.html) or go to the unofficial GitHub [mirror](index.html).
+Besuche die [Hauptseite](https://5e.tools/index.html) oder den inoffiziellen GitHub-[Mirror](index.html).
 
-[Join the 5etools Discord here!](https://discord.gg/5etools)
+[Tritt dem 5etools-Discord bei!](https://discord.gg/5etools)
 
-## Help and Support
+## Hilfe und Support
 
-Please see [our wiki](https://wiki.tercept.net/) for FAQs, installation guides, supported integrations, and more.
+Siehe unser [Wiki](https://wiki.tercept.net/) für FAQs, Installationsanleitungen, unterstützte Integrationen und mehr.
 
-## Contributing
+## Mitwirken
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Siehe [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## License
+## Lizenz
 
-This project is licensed under the terms of the MIT license.
+Dieses Projekt steht unter der MIT-Lizenz.
+
