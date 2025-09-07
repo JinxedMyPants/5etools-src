@@ -37,7 +37,7 @@
     <!-- macOS Safari Pinned Tab and Touch Bar -->
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#006bc4" />
     <!-- OpenSearch -->
-    <link rel="search" href="open-search.xml" title="Search 5etools" type="application/opensearchdescription+xml" />
+    <link rel="search" href="open-search.xml" title="5etools durchsuchen" type="application/opensearchdescription+xml" />
     <script type="module" src="js/styleswitch.js"></script>
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="module" src="js/browsercheck.js"></script>
@@ -62,9 +62,9 @@
         </div>
         <header class="hidden-xs hidden-sm page__header">
             <div class="container ve-flex-v-baseline">
-                <h1 class="page__title no-wrap my-0" id="page__title">Bestiary</h1>
+                <h1 class="page__title no-wrap my-0" id="page__title">Bestiarium</h1>
                 <p class="page__subtitle no-wrap my-0" id="page__subtitle">
-                    Search by name on the left, click a name to display on the right.
+                    Links nach Namen suchen; klicken Sie auf einen Eintrag, um ihn rechts anzuzeigen.
                 </p>
             </div>
         </header>
@@ -84,7 +84,7 @@
                             <div class="lst__wrp-search-visible no-events ve-flex-vh-center"></div>
                         </div>
                         <button type="button" class="ve-btn ve-btn-default" id="reset">
-                            Reset
+                            Zurücksetzen
                         </button>
                     </div>
                     <div id="filtertools" class="input-group input-group--bottom ve-flex no-shrink">
@@ -92,13 +92,13 @@
                             Name
                         </button>
                         <button type="button" class="ve-col-4-1 sort ve-btn ve-btn-default ve-btn-xs" data-sort="type">
-                            Type
+                            Typ
                         </button>
                         <button type="button" class="ve-col-1-7 sort ve-btn ve-btn-default ve-btn-xs" data-sort="cr">
-                            CR
+                            HG
                         </button>
                         <button type="button" class="sort ve-btn ve-btn-default ve-btn-xs ve-grow" data-sort="source">
-                            Source
+                            Quelle
                         </button>
                     </div>
                     <div id="list" class="list list--stats"></div>
@@ -118,7 +118,7 @@
                             <button type="button"
                                 class="ve-col-3-8 sort ve-btn ve-btn-default ve-btn-xs best-ecgen__hidden"
                                 data-sort="type">
-                                Type
+                                Typ
                             </button>
                             <button type="button"
                                 class="ve-col-3-8 sort ve-btn ve-btn-default ve-btn-xs best-ecgen__visible" disabled>
@@ -126,16 +126,16 @@
                             </button>
                             <button type="button" class="ve-col-1-2 sort ve-btn ve-btn-default ve-btn-xs"
                                 data-sort="cr">
-                                CR
+                                HG
                             </button>
                             <button type="button" class="ve-col-2 sort ve-btn ve-btn-default ve-btn-xs"
                                 data-sort="count">
-                                Number
+                                Anzahl
                             </button>
                         </div>
                         <div id="sublist" class="list"></div>
                         <div class="row best-ecgen__hidden ve-small">
-                            <span class="ve-col-6 ve-text-right pr-2">Total:</span>
+                            <span class="ve-col-6 ve-text-right pr-2">Gesamt:</span>
                             <span class="ve-col-6 no-wrap pl-0" id="totalcr"> </span>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                             </tr>
                             <tr>
                                 <td colspan="6" class="initial-message initial-message--med">
-                                    Select an entry from the list to view it here
+                                    Wählen Sie einen Eintrag aus der Liste aus, um ihn hier anzuzeigen
                                 </td>
                             </tr>
                             <tr>
@@ -161,34 +161,34 @@
                     <div class="ve-flex-vh-center mt-2 no-print mobile__ve-flex-col best-ecgen__hidden">
                         <div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
                             <button type="button" class="ve-btn ve-btn-success ve-btn-xs mr-2" id="btn-encounterbuild">
-                                Encounter Builder
+                                Begegnungs-Builder
                             </button>
                             <div id="wrp-profbonusdice" class="ve-flex-v-center">
                                 <button type="button" class="ve-btn ve-btn-default ve-btn-xs" id="profbonusdice"
-                                    title="See the Dungeon Master's Guide, p263.">
-                                    Use Proficiency Dice
+                                    title="Siehe das Spielleiterhandbuch, S. 263.">
+                                    Fertigkeitswürfel verwenden
                                 </button>
                             </div>
                         </div>
                         <div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
                             <button type="button" class="ve-btn ve-btn-default ve-btn-xs mr-2" id="btn-book">
-                                Printer View
+                                Druckansicht
                             </button>
                             <button type="button" class="ve-btn ve-btn-default ve-btn-xs" id="btn-show-table"
-                                title="View and Download Creatures in Tabular Format">
-                                Table View
+                                title="Kreaturen in Tabellenformat anzeigen und herunterladen">
+                                Tabellenansicht
                             </button>
                         </div>
                         <div class="ve-flex-v-center ve-btn-group" id="btngroup-manager">
                             <button type="button" class="ve-btn ve-btn-xs ve-btn-primary" name="manage-content">
-                                Manage Content
+                                Inhalte verwalten
                             </button>
                             <button type="button" class="ve-btn ve-btn-xs ve-btn-primary" name="manage-prerelease"
-                                title="Manage Prerelease Content">
+                                title="Pre-Release-Inhalte verwalten">
                                 <span class="glyphicon glyphicon-wrench"> </span>
                             </button>
                             <button type="button" class="ve-btn ve-btn-xs ve-btn-info" name="manage-brew"
-                                title="Manage Homebrew">
+                                title="Homebrew verwalten">
                                 <span class="glyphicon glyphicon-glass"> </span>
                             </button>
                         </div>
